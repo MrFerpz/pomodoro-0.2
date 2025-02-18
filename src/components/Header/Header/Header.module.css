@@ -3,7 +3,7 @@
     z-index: 1;
     height: 80px;
     width: 100vw;
-    background-color: black;
+    background-color: teal;
     display: flex;
     justify-content: flex-end;
     position: sticky;

@@ -1,0 +1,11 @@
+.shopObject {
+    border-radius: 10%;
+    box-shadow: 4px 4px black;
+    background-color: rgb(64, 64, 64);
+}
+
+.shopObject:hover {
+    transform: scale(1.01);
+    opacity: 0.8;
+    cursor: pointer;
+}

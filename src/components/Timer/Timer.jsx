@@ -17,7 +17,7 @@ function Timer({updateCoins, coins}) {
                         clearInterval(intervalId);
                         setIsActive(false);
                         updateCoins(prevCoins => prevCoins + 10);
-                        alert(`Good job! You've earned 10 coins. You now have ${coins + 10}`);
+                        alert(`Good job! You've earned 10 coins. You now have ${coins + 10}. Head to the shop to spend your earnings!`);
                     } else {
                         setMinutes(prevMinutes => prevMinutes - 1);
                         setSeconds(59);
@@ -44,6 +44,7 @@ function Timer({updateCoins, coins}) {
 
     return (
         <div>
+            <div className={styles.focusUp}>Focus up!</div>
             <div className={styles.timeText}>{formattedTime}</div>
             {isActive ? ( <img className={styles.fighting} src='https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExanJvNnhxNzc1eXczN3RncW53cTIwaHY1eHFkdjRwYnNvMjVoaXRmMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AHMPR6ASCvZY17KsdB/giphy.gif'></img> ) : (<img src="src/assets/fightingStatic.png" className={styles.pauseFighting}></img>)}
             <HStack className={styles.buttonContainer}>
