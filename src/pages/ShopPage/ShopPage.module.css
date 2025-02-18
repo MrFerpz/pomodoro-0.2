@@ -6,3 +6,11 @@
     grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
 }
+
+.separator {
+    height: 20px;
+}
+
+.balance {
+    font-weight: bold;
+}
