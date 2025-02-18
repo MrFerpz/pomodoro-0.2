@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage/HomePage'
 import FightPage from './pages/FightPage/FightPage'
-import AchievementsPage from './pages/AchievementsPage'
+import AchievementsPage from './pages/AchievementsPage/AchievementsPage'
 import ShopPage from './pages/ShopPage/ShopPage'
 import ProfilePage from './pages/ProfilePage'
 import Header from "./components/Header/Header/Header"
