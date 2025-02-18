@@ -1,5 +1,26 @@
 .timeText {
-    font-size: large;
+    font-size: xx-large;
     text-align: center;
     font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 8px;
+}
+
+.fighting, .pauseFighting {
+    border-radius: 10%;
+    height: 250px;
+    width: 250px;
+}
+
+.pauseFighting {
+    opacity: 10%;
+}
+
+.buttonContainer {
+    margin-top: 12px;
+    justify-content: space-around;
+}
+
+.playButton {
+    width: 73.98px;
 }

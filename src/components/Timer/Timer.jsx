@@ -45,10 +45,11 @@ function Timer({updateCoins, coins}) {
     return (
         <div>
             <div className={styles.timeText}>{formattedTime}</div>
-            <HStack>
+            {isActive ? ( <img className={styles.fighting} src='https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExanJvNnhxNzc1eXczN3RncW53cTIwaHY1eHFkdjRwYnNvMjVoaXRmMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AHMPR6ASCvZY17KsdB/giphy.gif'></img> ) : (<img src="src/assets/fightingStatic.png" className={styles.pauseFighting}></img>)}
+            <HStack className={styles.buttonContainer}>
                 {isActive ? (
-                <Button onClick={() => setIsActive(false)}>Pause</Button>) : (
-                <Button onClick={() => setIsActive(true)}>Start</Button>)}
+                <Button colorPalette="red" onClick={() => setIsActive(false)}>Pause</Button>) : (
+                <Button colorPalette="teal" className={styles.playButton} onClick={() => setIsActive(true)}>Play</Button>)}
                 <Button onClick={resetTimer}>Reset</Button>
             </HStack>
         </div>
