@@ -10,7 +10,7 @@ import Header from "./components/Header/Header/Header"
 import { Provider } from "./components/ui/provider"
 
 function App() {
-  const [coins, setCoins] = useState(0);
+  const [coins, setCoins] = useState(100);
 
   return (
     <Provider>

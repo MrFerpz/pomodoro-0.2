@@ -1,0 +1,15 @@
+.focusUp {
+    text-align: center;
+}
+
+.homeButton {
+    position: absolute;
+    right: 75vw;
+    top: 50vh;
+}
+
+.shopButton {
+    position: absolute;
+    left: 75vw;
+    top: 50vh;
+}

@@ -25,6 +25,10 @@
     width: 73.98px;
 }
 
-.focusUp {
-    text-align: center;
+.estimatedLootContainer {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
+
+

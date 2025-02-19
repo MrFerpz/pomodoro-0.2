@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react"
 import { Button, HStack } from "@chakra-ui/react"
+import { Slider } from "../../components/ui/slider"
 import styles from "./Timer.module.css"
+import Icons from "../Icons"
 
 function Timer({updateCoins, coins}) {
     const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(25);
     const [isActive, setIsActive] = useState(false);
+    const [value, setValue] = useState([25]);
 
     useEffect(() => {
         let intervalId;
@@ -42,10 +45,27 @@ function Timer({updateCoins, coins}) {
     let formattedSeconds = String(seconds).padStart(2, '0');
     let formattedTime = `${formattedMinutes}:${formattedSeconds}`
 
+    function handleValueChange(e) {
+        let newValue = e.value;
+        setMinutes(newValue);
+        setValue(newValue);
+    }
+
     return (
         <div>
-            <div className={styles.focusUp}>Focus up!</div>
+            <Slider 
+            colorPalette="teal"
+            value={value}
+            onValueChange={handleValueChange}
+            max={50}
+            min={20}
+            />
             <div className={styles.timeText}>{formattedTime}</div>
+            <div className = {styles.estimatedLootContainer}>
+                <div>Estimated Loot:</div>
+                <div className = {styles.estimatedCoinNumber}>{Math.round((value / 25) * 10)-1}-{Math.round((value / 25) * 10)+1}</div>
+                <div className = {styles.coinIcon}>{Icons.coin}</div>
+            </div>
             {isActive ? ( <img className={styles.fighting} src='https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExanJvNnhxNzc1eXczN3RncW53cTIwaHY1eHFkdjRwYnNvMjVoaXRmMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AHMPR6ASCvZY17KsdB/giphy.gif'></img> ) : (<img src="src/assets/fightingStatic.png" className={styles.pauseFighting}></img>)}
             <HStack className={styles.buttonContainer}>
                 {isActive ? (

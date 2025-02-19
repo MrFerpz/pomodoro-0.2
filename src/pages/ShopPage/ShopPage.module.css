@@ -14,3 +14,15 @@
 .balance {
     font-weight: bold;
 }
+
+.homeButton {
+    position: absolute;
+    right: 75vw;
+    top: 50vh;
+}
+
+.fightButton {
+    position: absolute;
+    left: 75vw;
+    top: 50vh;
+}

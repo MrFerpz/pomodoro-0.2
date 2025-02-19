@@ -1,5 +1,7 @@
 import styles from "./ShopPage.module.css"
 import ShopItem from "../../components/ShopItem/ShopItem"
+import { Link } from "react-router-dom"
+import Icons from "../../components/Icons"
 
 function ShopPage({coins, updateCoins}) {
     return (
@@ -17,6 +19,8 @@ function ShopPage({coins, updateCoins}) {
                 <ShopItem title="Takeaway" value="100" iconRef="takeaway" updateCoins={updateCoins}/>
                 <ShopItem title="Buy clothes" value="200" iconRef="clothing" updateCoins={updateCoins}/>
             </div>
+            <div className={styles.homeButton}><Link to="/">{Icons.home}</Link></div>
+            <div className={styles.fightButton}><Link to="../fight">{Icons.swords}</Link></div>
         </div>
     )
 }
