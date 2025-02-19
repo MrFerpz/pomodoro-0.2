@@ -19,7 +19,7 @@ function Timer({updateCoins, coins}) {
                     if (minutes === 0) {
                         clearInterval(intervalId);
                         setIsActive(false);
-                        updateCoins(prevCoins => prevCoins + 10);
+                        updateCoins(prevCoins => prevCoins + Math.round(((value/25) * 10)-1)+ Math.ceil(Math.random()*2))
                         alert(`Good job! You've earned 10 coins. You now have ${coins + 10}. Head to the shop to spend your earnings!`);
                     } else {
                         setMinutes(prevMinutes => prevMinutes - 1);
@@ -39,6 +39,7 @@ function Timer({updateCoins, coins}) {
         setIsActive(false);
         setMinutes(25);
         setSeconds(0);
+        setValue([25])
     }
 
     let formattedMinutes = String(minutes).padStart(2, '0');
@@ -59,7 +60,8 @@ function Timer({updateCoins, coins}) {
             onValueChange={handleValueChange}
             max={50}
             min={20}
-            />
+            {...(isActive ? {disabled: true} : {disabled: false})}/>
+
             <div className={styles.timeText}>{formattedTime}</div>
             <div className = {styles.estimatedLootContainer}>
                 <div>Estimated Loot:</div>
