@@ -10,7 +10,8 @@ import SpinPage from "./pages/SpinPage/SpinPage"
 import { Provider } from "./components/ui/provider"
 
 function App() {
-  const [coins, setCoins] = useState(100);
+  const [coins, setCoins] = useState(0);
+  const [stats, setStats] = useState({completions: 0, sessionRecord: [], totalCoinsEarned: 0});
 
   return (
     <Provider>
@@ -19,11 +20,11 @@ function App() {
         <section>
           <Routes>
             <Route path="/" element={<HomePage/>}/>
-            <Route path="fight" element={<FightPage coins={coins} updateCoins={setCoins}/>}/>
+            <Route path="fight" element={<FightPage coins={coins} updateCoins={setCoins} updateStats={setStats}/>}/>
             <Route path="shop" element={<ShopPage coins={coins} updateCoins={setCoins}/>}/>
             <Route path="shop/spin" element={<SpinPage/>}/>
             <Route path="achievements" element={<AchievementsPage/>}/>
-            <Route path="profile" element={<ProfilePage/>}/>
+            <Route path="profile" element={<ProfilePage stats={stats}/>}/>
           </Routes>
         </section>
       </div>

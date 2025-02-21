@@ -4,7 +4,7 @@ import { Slider } from "../../components/ui/slider"
 import styles from "./Timer.module.css"
 import Icons from "../Icons"
 
-function Timer({updateCoins, coins}) {
+function Timer({updateStats, updateCoins, coins}) {
     const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(25);
     const [isActive, setIsActive] = useState(false);
@@ -19,7 +19,12 @@ function Timer({updateCoins, coins}) {
                     if (minutes === 0) {
                         clearInterval(intervalId);
                         setIsActive(false);
-                        updateCoins(prevCoins => prevCoins + Math.round(((value/25) * 10)-1)+ Math.ceil(Math.random()*2))
+                        let coinGain = Math.round(((value/25) * 10)-1)+ Math.ceil(Math.random()*2);
+                        updateCoins(prevCoins => prevCoins + coinGain);
+                        updateStats(prevStats => 
+                            ({...prevStats, completions: completions + 1,
+                                sessionRecord: [...prevStats.sessionRecord, value],
+                                totalCoinsEarned: totalCoinsEarned + coinGain}))
                         alert(`Good job! You've earned 10 coins. You now have ${coins + 10}. Head to the shop to spend your earnings!`);
                     } else {
                         setMinutes(prevMinutes => prevMinutes - 1);
