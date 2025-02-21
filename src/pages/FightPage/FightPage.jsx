@@ -8,7 +8,7 @@ function FightPage({updateCoins, coins}) {
         <div>
             <div className={styles.homeButton}><Link to="/">{Icons.home}</Link></div>
             <div className={styles.shopButton}><Link to="../shop">{Icons.shop}</Link></div>
-            <div className={styles.focusUp}>Send Jenkins on a mission (focus up!)</div>
+            <div className={styles.focusUp}>Send <b>Jenkins</b> on a mission (focus up!)</div>
             <Timer updateCoins={updateCoins} coins={coins}/>
         </div>
     )

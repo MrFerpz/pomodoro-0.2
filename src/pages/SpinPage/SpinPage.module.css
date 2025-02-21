@@ -20,18 +20,32 @@
     background-color: #234E52;
     opacity: 100%;
     animation-name: color-change;
-    animation-duration: 4s;
+    animation-duration: 3s;
 }
 
 @keyframes color-change {
-    0% {background-color: #38B2AC;}
-    20% {background-color: #234E52;}
-    40% {background-color: #38B2AC;}
+    0% {background-color: #234E52;}
+    15% {background-color: #38B2AC;}
+    30% {background-color: #234E52;}
+    45% {background-color: #38B2AC;}
     60% {background-color: #234E52;}
-    80% {background-color: #38B2AC;}
+    75% {background-color: #38B2AC;}
     100% {background-color: #234E52;}
 }
 
 .selectedBox {
-    background-color: #38B2AC;
+    background-color: #234E52;
+    opacity: 100%;
+}
+
+.homeButton {
+    position: absolute;
+    right: 75vw;
+    top: 50vh;
+}
+
+.shopButton {
+    position: absolute;
+    left: 75vw;
+    top: 50vh;
 }

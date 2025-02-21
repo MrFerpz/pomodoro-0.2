@@ -1,9 +1,11 @@
 import styles from "./SpinPage.module.css"
 import { useState, useRef } from "react"
 import { Stack, Button } from "@chakra-ui/react"
+import { Link } from "react-router-dom"
+import Icons from "../../components/Icons"
 
 function SpinPage() {
-    const [prizeList, setPrizeList] = [["10m break", "chess game", "walk", "croissant", "coffee", "early finish", "takeaway", "buy clothes"]]
+    const [prizeList, setPrizeList] = [["10m break", "Chess game", "Walk", "Croissant", "Coffee", "Early finish", "Takeaway", "Buy clothes"]]
     const [isSpinning, setIsSpinning] = useState(null)
     const [selectedPrize, setSelectedPrize] = useState(null)
 
@@ -11,8 +13,7 @@ function SpinPage() {
         let randomNumber = Math.round(Math.random()*(prizeList.length-1))
         setSelectedPrize(prizeList[randomNumber]);
         setIsSpinning(true);
-        // apply class after the duration of the animation
-        // setTimeout(() => {}, 4000)
+        setTimeout(() => {setIsSpinning(false)}, 3000)
     }
 
     return (
@@ -29,6 +30,8 @@ function SpinPage() {
                 })}
             </Stack>
             </div>
+            <div className={styles.homeButton}><Link to="/">{Icons.home}</Link></div>
+            <div className={styles.shopButton}><Link to="../shop">{Icons.shop}</Link></div>
         </div>
     )
 }

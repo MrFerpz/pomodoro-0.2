@@ -6,3 +6,9 @@
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 20px;
 }
+
+.homeButton {
+        position: absolute;
+        right: 75vw;
+        top: 50vh;
+    }
