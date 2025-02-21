@@ -9,7 +9,9 @@ function ShopPage({coins, updateCoins}) {
             <div className={styles.balance}>CURRENT BALANCE: {coins}</div>
             <div className={styles.separator}></div>
             <div className={styles.shopGrid}>
-                <ShopItem title="5m break" value="10" iconRef="shortBreak" updateCoins={updateCoins}/>
+                <Link to="spin" className={styles.shopSpinLink}>
+                    <ShopItem title="Spin the Wheel" value="10" iconRef="wheel" updateCoins={updateCoins}/>
+                </Link>
                 <ShopItem title="10m break" value="15" iconRef="longBreak" updateCoins={updateCoins}/>
                 <ShopItem title="Chess game" value="10" iconRef="chess" updateCoins={updateCoins}/>
                 <ShopItem title="Walk" value="10" iconRef="walk" updateCoins={updateCoins}/>

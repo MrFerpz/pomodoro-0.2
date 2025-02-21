@@ -1,0 +1,37 @@
+.box {
+    border: 2px white solid;
+    padding: 15px 40px;
+    text-align: center;
+    background-color: #234E52;
+    opacity: 10%;
+}
+
+.horizontalFlexContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.animatedBox {
+    border: 2px white solid;
+    padding: 15px 40px;
+    text-align: center;
+    background-color: #234E52;
+    opacity: 100%;
+    animation-name: color-change;
+    animation-duration: 4s;
+}
+
+@keyframes color-change {
+    0% {background-color: #38B2AC;}
+    20% {background-color: #234E52;}
+    40% {background-color: #38B2AC;}
+    60% {background-color: #234E52;}
+    80% {background-color: #38B2AC;}
+    100% {background-color: #234E52;}
+}
+
+.selectedBox {
+    background-color: #38B2AC;
+}

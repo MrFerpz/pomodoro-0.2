@@ -26,3 +26,8 @@
     left: 75vw;
     top: 50vh;
 }
+
+.shopSpinLink {
+    display: flex;
+    flex-grow: auto;
+}

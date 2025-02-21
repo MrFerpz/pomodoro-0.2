@@ -1,6 +1,8 @@
-- disable slider during pomodoro time
+- disable slider during pomodoro time DONE
 - build out spin the wheel in the shop
+    - pivoted to a stack with lights as wheel is complicated
 - make it save user's data when closing browser
+- hook up to an LLM for random reports of what happened on the mission?
 - create character upgrade / recruitment page
 - create post-timer reports
 - populate achievements page

@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage/HomePage'
@@ -7,6 +6,7 @@ import AchievementsPage from './pages/AchievementsPage/AchievementsPage'
 import ShopPage from './pages/ShopPage/ShopPage'
 import ProfilePage from './pages/ProfilePage'
 import Header from "./components/Header/Header/Header"
+import SpinPage from "./pages/SpinPage/SpinPage"
 import { Provider } from "./components/ui/provider"
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
             <Route path="/" element={<HomePage/>}/>
             <Route path="fight" element={<FightPage coins={coins} updateCoins={setCoins}/>}/>
             <Route path="shop" element={<ShopPage coins={coins} updateCoins={setCoins}/>}/>
+            <Route path="shop/spin" element={<SpinPage/>}/>
             <Route path="achievements" element={<AchievementsPage/>}/>
             <Route path="profile" element={<ProfilePage/>}/>
           </Routes>
