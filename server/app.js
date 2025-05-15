@@ -22,6 +22,7 @@ app.post("/api/generate", async (req, res) => {
     console.log(completion.choices[0].message.content);
     res.json({ message: completion.choices[0].message.content });
   } catch (err) {
+    console.log(err);
     res.status(500).json({ error: err.message });
   }
 });

@@ -4,7 +4,7 @@ import { Slider } from "../../components/ui/slider"
 import styles from "./Timer.module.css"
 import Icons from "../Icons"
 
-function Timer({updateStats, updateCoins, coins}) {
+function Timer({updateStats, updateCoins, coins, onComplete}) {
     const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(25);
     const [isActive, setIsActive] = useState(false);
@@ -21,11 +21,12 @@ function Timer({updateStats, updateCoins, coins}) {
                         setIsActive(false);
                         let coinGain = Math.round(((value/25) * 10)-1)+ Math.ceil(Math.random()*2);
                         updateCoins(prevCoins => prevCoins + coinGain);
-                        updateStats(prevStats => 
-                            ({...prevStats, completions: completions + 1,
-                                sessionRecord: [...prevStats.sessionRecord, value],
-                                totalCoinsEarned: totalCoinsEarned + coinGain}))
+                        // updateStats(prevStats => 
+                        //     ({...prevStats, completions: completions + 1,
+                        //         sessionRecord: [...prevStats.sessionRecord, value],
+                        //         totalCoinsEarned: totalCoinsEarned + coinGain}))
                         alert(`Good job! You've earned 10 coins. You now have ${coins + 10}. Head to the shop to spend your earnings!`);
+                        onComplete();
                     } else {
                         setMinutes(prevMinutes => prevMinutes - 1);
                         setSeconds(59);
@@ -45,6 +46,12 @@ function Timer({updateStats, updateCoins, coins}) {
         setMinutes(25);
         setSeconds(0);
         setValue([25])
+    }
+
+    function testTimer() {
+        setIsActive(false);
+        setMinutes(0);
+        setSeconds(12);
     }
 
     let formattedMinutes = String(minutes).padStart(2, '0');
@@ -79,6 +86,7 @@ function Timer({updateStats, updateCoins, coins}) {
                 <Button colorPalette="red" onClick={() => setIsActive(false)}>Pause</Button>) : (
                 <Button colorPalette="teal" className={styles.playButton} onClick={() => setIsActive(true)}>Play</Button>)}
                 <Button onClick={resetTimer}>Reset</Button>
+                <Button onClick={testTimer}>Test</Button>
             </HStack>
         </div>
     )
