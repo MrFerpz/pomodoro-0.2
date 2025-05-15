@@ -3,15 +3,16 @@
 - build out spin the wheel in the shop DONE
     - pivoted to a stack with lights as wheel is complicated DONE
 - create profile page DONE (kinda, with stats)
+- make it save user's data when closing browser
 ---------- DONE ---------- 
 
 ---------- DOING ---------- 
-- make it save user's data when closing browser
+- hook up to an LLM for random reports of what happened on the mission for post-timer reports?
 ---------- DOING ---------- 
 
 ---------- TO DO ---------- 
-- hook up to an LLM for random reports of what happened on the mission
 - create character upgrade / recruitment page
-- create post-timer reports
 - populate achievements page
+- different characters can have different perks / classes that can give bonuses
+- add option to change timer to toggle, so that you don't get interrupted & don't need to set a timer
 ---------- TO DO ---------- 

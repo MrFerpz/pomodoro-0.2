@@ -11,8 +11,8 @@ import { Provider } from "./components/ui/provider"
 
 function App() {
   // initial state is empty
-  const [coins, setCoins] = useState(0);
-  const [stats, setStats] = useState({completions: 0, sessionRecord: [], totaloinsEarned: 0});
+  const [coins, setCoins] = useState(50);
+  const [stats, setStats] = useState({completions: 0, sessionRecord: [], totalCoinsEarned: 0});
 
   // check if there is previous saved data
   useEffect(() => {
