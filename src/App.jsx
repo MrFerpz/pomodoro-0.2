@@ -7,6 +7,7 @@ import ShopPage from './pages/ShopPage/ShopPage'
 import ProfilePage from './pages/ProfilePage'
 import Header from "./components/Header/Header/Header"
 import SpinPage from "./pages/SpinPage/SpinPage"
+import DailyPage from './pages/DailyPage/DailyPage'
 import { Provider } from "./components/ui/provider"
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
             <Route path="shop/spin" element={<SpinPage/>}/>
             <Route path="achievements" element={<AchievementsPage/>}/>
             <Route path="profile" element={<ProfilePage stats={stats}/>}/>
+            <Route path="daily" element={<DailyPage/>}/>
           </Routes>
         </section>
       </div>

@@ -1,0 +1,5 @@
+.dailyGrid {
+    display: grid;
+    grid-template-columns: 3;
+    gap: 20px;
+}
