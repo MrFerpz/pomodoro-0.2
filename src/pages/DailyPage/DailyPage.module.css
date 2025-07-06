@@ -4,6 +4,11 @@
     gap: 20px;
 }
 
+.flexContainer {
+    display: flex;
+    justify-content: center;
+}
+
 .title {
     font-size: x-large;
     font-weight: 600;
