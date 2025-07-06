@@ -50,7 +50,7 @@ function App() {
             <Route path="shop/spin" element={<SpinPage/>}/>
             <Route path="achievements" element={<AchievementsPage/>}/>
             <Route path="profile" element={<ProfilePage stats={stats}/>}/>
-            <Route path="daily" element={<DailyPage/>}/>
+            <Route path="daily" element={<DailyPage coins={coins} updateCoins={setCoins}/>}/>
           </Routes>
         </section>
       </div>

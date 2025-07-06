@@ -8,5 +8,10 @@
     font-size: x-large;
     font-weight: 600;
     text-align: center;
-    padding: 20px
+    padding: 10px
+}
+
+.coinsText {
+    padding: 10px;
+    text-align: center;
 }

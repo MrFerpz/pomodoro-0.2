@@ -19,3 +19,8 @@
 .taskText {
     font-weight: 500
 }
+
+.coinsText {
+    padding: 10px;
+    text-align: center;
+}
