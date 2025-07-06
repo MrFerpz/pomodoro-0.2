@@ -5,6 +5,7 @@ import styles from "./HomePage.module.css"
 function HomePage() {
     return (
             <div className={styles.iconContainer}>
+                <div className={styles.icon}><Link to="daily">{Icons.calendarCheck}</Link></div>
                 <div className={styles.icon}><Link to="fight">{Icons.swords}</Link></div>
                 <div className={styles.icon}><Link to="shop">{Icons.shop}</Link></div>
                 <div className={styles.icon}><Link to="profile">{Icons.profile}</Link></div>
