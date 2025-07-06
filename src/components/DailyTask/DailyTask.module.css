@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    aspect-ratio: 1;
     padding: 20px;
 }
 
@@ -13,4 +14,8 @@
     transform: scale(1.01);
     opacity: 0.8;
     cursor: pointer;
+}
+
+.taskText {
+    font-weight: 500
 }

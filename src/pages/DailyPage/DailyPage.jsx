@@ -3,10 +3,13 @@ import DailyTask from "../../components/DailyTask/DailyTask"
 
 export default function DailyPage() {
     return (
-        <div className={styles.dailyGrid}>
-            <DailyTask task={"Exercise"}/>
-            <DailyTask task={"Meditate"}/>
-            <DailyTask task={"French"}/>
+        <div>
+            <div className={styles.title}>Daily Habits</div>
+            <div className={styles.dailyGrid}>
+                <DailyTask task={"Exercise"}/>
+                <DailyTask task={"Meditate"}/>
+                <DailyTask task={"French"}/>
+            </div>
         </div>
     )
 }
